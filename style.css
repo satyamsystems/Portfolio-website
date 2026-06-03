@@ -35,3 +35,14 @@ button{
     padding:10px 20px;
     cursor:pointer;
 }
+@media(max-width:768px){
+
+    header{
+        padding:20px;
+    }
+
+    form input,
+    form textarea{
+        width:90%;
+    }
+}
