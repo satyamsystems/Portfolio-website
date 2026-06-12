@@ -9,3 +9,25 @@ document.querySelector("form").addEventListener("submit", function(event){
     }
 
 });
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href'))
+            .scrollIntoView({
+                behavior: 'smooth'
+            });
+    });
+});
+const text = [
+    "Java Developer",
+    "C++ Programmer",
+    "Web Development Learner"
+];
+
+let i = 0;
+
+setInterval(() => {
+    document.getElementById("typing").innerText = text[i];
+    i = (i + 1) % text.length;
+}, 2000);
